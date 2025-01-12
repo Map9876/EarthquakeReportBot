@@ -20,7 +20,7 @@ for (const eq of await ceicLookup()) {
 }
 
 console.log('Pool:', sent_earthquakes)
-
+//setInterval主函数，异步调用async function ceicLookup，这种前面没有async function的应该是立刻执行而不是定义函数
 setInterval(async () => {
     try {
         for (const eq of await ceicLookup()) {
